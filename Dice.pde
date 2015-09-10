@@ -1,15 +1,15 @@
 int c = 10; // size
-int h = 73; // controls # rows
+int h = 72; // controls # rows
 int w = 78; // controls # columns
 float a = c*.7;// .7 of mid point
 float b = c*1.3;// 1.3 of mid point
 float d = c*.2;// size of dot   d1 = false;
+int numdice = (int)((h/2)+1)*((w/2)+1);// numbers of dices
 int sum = 0;
 void setup()
 {
   background(255);
   size(800,800);
-  
   
 }
 void draw()
@@ -24,7 +24,8 @@ void draw()
 }
    fill(0);
    textSize(50);
-  text( "sum :"+ sum , 20, 790);
+  text( "Sum :"+ sum , 20, 790);
+  text( "Dices:"+ numdice , 300, 790);
 
 }
 void mousePressed()
@@ -59,6 +60,7 @@ class Die //models one single dice cube
      stroke(255,255,255);
      fill(0,0,0);
    rect(x1,y1,c*2,c*2,c*.4);
+   
    if( r1 == 1 ){ 
     fill(255,255,225);
     noStroke();
