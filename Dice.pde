@@ -25,7 +25,7 @@ void draw()
    fill(0);
    textSize(50);
   text( "Sum :"+ sum , 20, 790);
-  text( "Dices:"+ numdice , 300, 790);
+  text( "Dices:"+ numdice , 500, 790);
 
 }
 void mousePressed()
